@@ -1,0 +1,170 @@
+<!-- STAKFLOW LANDING PAGE: paste into an Elementor "HTML" widget -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Karla:wght@400;500;700&display=swap');
+.sfl{--bg:#fdfefc;--mint:#e8f4ea;--butter:#fdf3d7;--lilac:#efe9f7;--peach:#fde8df;--leaf:#5c9270;--deep:#2e4a3b;--ink:#26362d;--mut:#5b6d61;--line:#dde9df;background:var(--bg);color:var(--ink);font:400 17px/1.75 Karla,system-ui,sans-serif}
+.sfl *,.sfl *::before,.sfl *::after{box-sizing:border-box}
+.sfl h1,.sfl h2,.sfl h3{font-family:Quicksand,system-ui,sans-serif;font-weight:700;line-height:1.2;margin:0 0 .5em;color:var(--deep)}
+.sfl h1{font-size:clamp(2.3rem,5.8vw,4rem)}.sfl h2{font-size:clamp(1.8rem,3.8vw,2.6rem)}.sfl h3{font-size:1.15rem}
+.sfl p{margin:0 0 1em}.sfl a{color:inherit}
+.sfl .w{max-width:1080px;margin:0 auto;padding:0 20px}
+.sfl .bar{display:flex;align-items:center;justify-content:space-between;height:72px}
+.sfl .logo{font:700 1.7rem Quicksand,sans-serif;color:var(--deep);text-decoration:none}.sfl .logo span{color:var(--leaf)}
+.sfl nav{display:flex;gap:26px}.sfl nav a{text-decoration:none;color:var(--mut);font-weight:500;font-size:.95rem}
+@media(max-width:760px){.sfl nav{display:none}}
+.sfl .hero{background:var(--mint);text-align:center;padding-bottom:0}
+.sfl .hero .in{max-width:760px;margin:0 auto;padding:36px 0 10px}
+.sfl .kick{display:inline-block;background:#fff;color:var(--leaf);border-radius:99px;padding:6px 18px;font-weight:700;margin-bottom:16px}
+.sfl .hero p{color:var(--mut);font-size:1.15rem;max-width:60ch;margin-left:auto;margin-right:auto}
+.sfl .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0 0}
+.sfl .chips span{background:#fff;border-radius:99px;padding:6px 16px;font-weight:500;font-size:.92rem}
+.sfl svg{display:block;width:100%;height:auto}
+.sfl .hero svg{max-width:860px;margin:18px auto 0}
+.sfl .wave{display:block;width:100%;height:50px;margin-top:-1px}
+.sfl .rib{text-align:center;padding:10px 20px 4px}.sfl .rib h2{margin:0;color:var(--leaf);font-size:clamp(1.3rem,2.8vw,1.9rem)}
+.sfl section{padding:80px 0}
+.sfl .head{max-width:720px;margin:0 auto 42px;text-align:center}.sfl .head p{color:var(--mut)}
+.sfl .row{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;padding:26px 0;border-top:1px solid var(--line)}
+.sfl .row:last-child{border-bottom:1px solid var(--line)}
+.sfl .row .ci{border-radius:50%;overflow:hidden;width:150px;height:150px}.sfl .row p{margin:0;color:var(--mut)}
+@media(max-width:640px){.sfl .row{grid-template-columns:1fr}.sfl .row .ci{width:110px;height:110px}}
+.sfl .bg1{background:var(--butter)}.sfl .bg2{background:var(--lilac)}.sfl .bg3{background:var(--peach)}.sfl .bg0{background:var(--mint)}
+.sfl .why{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.sfl .why div{background:#fff;border-radius:24px;padding:24px;display:flex;gap:14px}
+.sfl .why .e{font-size:1.8rem;line-height:1}.sfl .why p{margin:0;color:var(--mut)}
+@media(max-width:760px){.sfl .why{grid-template-columns:1fr}}
+.sfl .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;position:relative}
+.sfl .flow::before{content:"";position:absolute;left:10%;right:10%;top:36px;border-top:3px dotted var(--leaf);opacity:.5}
+.sfl .fs{text-align:center;position:relative}
+.sfl .fs .ic{width:72px;height:72px;border-radius:50%;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:2rem;border:4px solid #fff}
+.sfl .fs p{color:var(--mut);font-size:.95rem;margin:0}.sfl .fs b{display:block;font:700 .82rem Quicksand,sans-serif;color:var(--leaf)}
+@media(max-width:860px){.sfl .flow{grid-template-columns:1fr 1fr}.sfl .flow::before{display:none}}
+@media(max-width:520px){.sfl .flow{grid-template-columns:1fr}}
+.sfl .g5{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+@media(max-width:980px){.sfl .g5{grid-template-columns:repeat(3,1fr)}}@media(max-width:640px){.sfl .g5{grid-template-columns:1fr 1fr}}@media(max-width:420px){.sfl .g5{grid-template-columns:1fr}}
+.sfl .hb{background:#fff;border-radius:24px;overflow:hidden}.sfl .hb .tx{padding:14px 16px 18px}
+.sfl .hb h3{margin-bottom:.2em}.sfl .hb p{margin:0 0 .4em;font-size:.93rem;color:var(--mut)}.sfl .hb b{font-size:.82rem;color:var(--leaf)}
+.sfl .two{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+@media(max-width:860px){.sfl .two,.sfl .faq{grid-template-columns:1fr!important}}
+.sfl .kit{background:var(--butter);border-radius:28px;padding:30px}
+.sfl .kit label{display:flex;gap:12px;align-items:center;padding:7px 0;cursor:pointer;font-weight:500}
+.sfl .kit input{width:20px;height:20px;accent-color:var(--leaf)}
+.sfl .kit input:checked+span{text-decoration:line-through;opacity:.55}
+.sfl .tips{background:var(--lilac);border-radius:28px;padding:30px}.sfl .tips ul{margin:0;padding-left:1.1em}.sfl .tips li{margin-bottom:.7em;color:var(--mut)}
+.sfl .fix{display:grid;grid-template-columns:1fr 1.5fr;gap:12px 20px;max-width:840px;margin:0 auto}
+.sfl .fx1{background:var(--peach);border-radius:18px;padding:14px 20px;font-weight:700;color:var(--deep);font-family:Quicksand,sans-serif}
+.sfl .fx2{background:var(--mint);border-radius:18px;padding:14px 20px;color:var(--mut)}
+@media(max-width:700px){.sfl .fix{grid-template-columns:1fr}}
+.sfl .join{background:var(--peach);border-radius:40px;padding:54px 30px;text-align:center}
+.sfl .join p{max-width:60ch;margin:0 auto 1em;color:var(--mut)}
+.sfl .faq{display:grid;grid-template-columns:1fr 1.5fr;gap:48px;align-items:start}.sfl .faq .s{color:var(--mut)}
+.sfl details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 22px;margin-bottom:12px}
+.sfl summary{cursor:pointer;font:700 1.08rem Quicksand,sans-serif;color:var(--deep)}.sfl details p{margin:10px 0 0;color:var(--mut)}
+.sfl .cta{background:var(--deep);color:#fff;text-align:center}
+.sfl .cta h2{color:#fff;max-width:20ch;margin:0 auto .4em}.sfl .cta p{max-width:56ch;margin:0 auto 1em;color:#d5e6d8}
+.sfl .cta .lm{color:var(--butter);font-weight:700;margin:0}
+.sfl footer{background:var(--deep);color:#b9d0bf;padding:24px 0;font-size:.9rem;border-top:1px solid #47695a}
+.sfl footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
+
+<div class="sfl" id="top">
+<div class="hero">
+<div class="w bar"><a class="logo" href="#top">Stakflow<span>.</span></a>
+<nav><a href="#promise">Why us</a><a href="#grow">Seed to harvest</a><a href="#herbs">Herbs</a><a href="#faq">FAQ</a></nav></div>
+<div class="w"><div class="in">
+<span class="kick">🌿 Creating a Magical Atmosphere</span>
+<h1>Stakflow: grow fresh herbs right on your windowsill</h1>
+<p>Designed for dreamers, built for doers. Your Online Adventures Platform for home growing: simple guides you can follow Anytime, Anywhere, Anything.</p>
+<p>Click today and unlock exclusive benefits.</p>
+<div class="chips"><span>🌱 Incredible Fun And More</span><span>🔒 Safe &amp; Secure</span><span>✨ Breathtaking Experience</span></div>
+</div>
+<svg viewBox="0 0 760 300" role="img" aria-label="Three herb pots on a sunny windowsill">
+<rect x="120" y="20" width="520" height="240" rx="18" fill="#f6fbf7"/><rect x="120" y="20" width="520" height="240" rx="18" fill="none" stroke="#cfe3d3" stroke-width="8"/>
+<path d="M380 20v240M120 140h520" stroke="#cfe3d3" stroke-width="6"/><circle cx="560" cy="70" r="30" fill="#fdf3d7"/>
+<rect x="90" y="258" width="580" height="22" rx="8" fill="#e3c9a8"/>
+<path d="M190 258l8-64h74l8 64z" fill="#e8b5a0"/><path d="M340 258l8-64h74l8 64z" fill="#f2c9b6"/><path d="M490 258l8-64h74l8 64z" fill="#e8b5a0"/>
+<g fill="#7fae86"><circle cx="235" cy="160" r="26"/><circle cx="210" cy="176" r="20"/><circle cx="260" cy="176" r="20"/><circle cx="235" cy="132" r="18" fill="#93c09a"/></g>
+<g fill="#8bbd93"><ellipse cx="380" cy="160" rx="14" ry="20" transform="rotate(-35 380 160)"/><ellipse cx="415" cy="150" rx="14" ry="20" transform="rotate(30 415 150)"/><ellipse cx="398" cy="130" rx="13" ry="19"/><ellipse cx="365" cy="182" rx="12" ry="17" transform="rotate(-60 365 182)"/><ellipse cx="430" cy="180" rx="12" ry="17" transform="rotate(60 430 180)"/></g>
+<g stroke="#6aa07a" stroke-width="5" stroke-linecap="round"><path d="M520 194v-70M535 194v-90M550 194v-80M565 194v-66M580 194v-56M505 194v-50"/></g>
+</svg>
+</div>
+<svg class="wave" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1440V20C1200 50 1000 0 720 20C440 42 240 6 0 30Z" fill="#e8f4ea"/></svg>
+</div>
+<div class="rib"><h2>Discover the perfect blend of quality and value.</h2></div>
+
+<section id="promise"><div class="w">
+<div class="head"><h2>Because you deserve something truly special ✨</h2><p>More than a product, it's a lifestyle. Three promises guide everything at Stakflow.</p></div>
+<div class="row"><div class="ci bg3"><svg viewBox="0 0 150 150" role="img" aria-label="Small potted seedlings"><path d="M35 120l6-32h28l6 32z" fill="#e8b5a0"/><path d="M85 120l5-24h24l5 24z" fill="#f2c9b6"/><g stroke="#5c9270" stroke-width="3" stroke-linecap="round"><path d="M55 88v-26M102 96v-20"/></g><g fill="#7fae86"><ellipse cx="46" cy="60" rx="12" ry="6" transform="rotate(-25 46 60)"/><ellipse cx="64" cy="58" rx="12" ry="6" transform="rotate(25 64 58)"/><ellipse cx="94" cy="74" rx="10" ry="5" transform="rotate(-25 94 74)"/><ellipse cx="110" cy="72" rx="10" ry="5" transform="rotate(25 110 72)"/></g></svg></div><div><h3>Incredible Fun And More</h3><p>Growing challenges, herb swaps and a friendly community make every harvest feel like a small celebration. Try it out today and you'll never be disappointed.</p></div></div>
+<div class="row"><div class="ci bg0"><svg viewBox="0 0 150 150" role="img" aria-label="Shield with a leaf"><path d="M75 22l46 16v42c0 30-22 50-46 62-24-12-46-32-46-62V38z" fill="#cfe3d3"/><path d="M75 108V64M75 90c-14-2-22-10-24-22 13 0 21 8 24 22M75 78c14-2 22-10 24-22-13 0-21 8-24 22" stroke="#5c9270" stroke-width="5" fill="none" stroke-linecap="round"/></svg></div><div><h3>Safe &amp; Secure</h3><p>Guides that recommend gentle, home-safe methods and protected sign-ups. Experience excellence without compromise.</p></div></div>
+<div class="row"><div class="ci bg1"><svg viewBox="0 0 150 150" role="img" aria-label="Sun over green hills"><circle cx="100" cy="52" r="22" fill="#fbe3a0"/><path d="M0 110C30 80 60 84 90 100S130 90 150 84V150H0z" fill="#b9dcc0"/><path d="M0 130C40 106 80 118 150 108V150H0z" fill="#8bbd93"/></svg></div><div><h3>Breathtaking Experience</h3><p>Calm visuals and clear steps turn a small windowsill into a living garden. Act fast: limited time, unlimited value.</p></div></div>
+</div></section>
+
+<section class="bg2"><div class="w">
+<div class="head"><h2>Why Stakflow feels different 🌍</h2><p>We are a well-respected name among home growers, from first-time gardeners to seasoned green thumbs.</p></div>
+<div class="why">
+<div><span class="e">🍀</span><span><h3>New chapter of luck begins now</h3><p>A fresh start for your kitchen, with herbs you grew yourself.</p></span></div>
+<div><span class="e">🌐</span><span><h3>Anytime, Anywhere, Anything</h3><p>Follow guides on any device, from a balcony, a rooftop or a kitchen shelf.</p></span></div>
+<div><span class="e">⏳</span><span><h3>Don't wait: your future starts now</h3><p>Herbs grow quickly, so you can taste results within weeks.</p></span></div>
+<div><span class="e">🌱</span><span><h3>Small changes create big impacts</h3><p>Pinching one shoot or moving one pot into the sun can change everything.</p></span></div>
+</div></div></section>
+
+<section id="grow"><div class="w">
+<div class="head"><p style="color:var(--leaf);font-weight:700;margin-bottom:6px">📖 Stakflow guide · 5 min read</p><h2>Your Stakflow from seed to harvest</h2><p>Five stages take most herbs from a packet of seeds to your plate.</p></div>
+<div class="flow">
+<div class="fs"><div class="ic bg1">🌰</div><b>Step 1</b><h3>Sow</h3><p>Press seeds into moist seed mix in a pot with drainage holes.</p></div>
+<div class="fs"><div class="ic bg0">🌱</div><b>Step 2</b><h3>Sprout</h3><p>Keep the soil lightly moist and warm until seedlings appear.</p></div>
+<div class="fs"><div class="ic bg2">☀️</div><b>Step 3</b><h3>Grow</h3><p>Move to a bright spot with several hours of sun and thin crowded seedlings.</p></div>
+<div class="fs"><div class="ic bg3">✂️</div><b>Step 4</b><h3>Pinch</h3><p>Snip the top of young stems so the plant grows bushy, not tall.</p></div>
+<div class="fs"><div class="ic bg1">🍃</div><b>Step 5</b><h3>Harvest</h3><p>Pick a little often, and never take more than a third at once.</p></div>
+</div></div></section>
+
+<section class="bg0" id="herbs"><div class="w">
+<div class="head"><h2>Five friendly herbs to begin with 🌿</h2><p>Choose two or three that you already cook with, so every leaf gets used.</p></div>
+<div class="g5">
+<div class="hb"><div class="bg1"><svg viewBox="0 0 160 150" role="img" aria-label="Basil"><path d="M50 140l6-40h48l6 40z" fill="#e8b5a0"/><g fill="#7fae86"><circle cx="80" cy="70" r="24"/><circle cx="58" cy="86" r="18"/><circle cx="102" cy="86" r="18"/><circle cx="80" cy="46" r="14" fill="#93c09a"/></g></svg></div><div class="tx"><h3>Basil</h3><p>Loves warmth and plenty of sun. Pinch flower buds.</p><b>☀️ 6+ hours of sun</b></div></div>
+<div class="hb"><div class="bg2"><svg viewBox="0 0 160 150" role="img" aria-label="Mint"><path d="M50 140l6-40h48l6 40z" fill="#f2c9b6"/><g fill="#8bbd93"><ellipse cx="62" cy="80" rx="12" ry="18" transform="rotate(-35 62 80)"/><ellipse cx="98" cy="80" rx="12" ry="18" transform="rotate(35 98 80)"/><ellipse cx="80" cy="62" rx="12" ry="18"/><ellipse cx="60" cy="100" rx="10" ry="15" transform="rotate(-65 60 100)"/><ellipse cx="100" cy="100" rx="10" ry="15" transform="rotate(65 100 100)"/></g></svg></div><div class="tx"><h3>Mint</h3><p>Spreads fast, so keep it in its own pot.</p><b>🌤️ Part sun, moist soil</b></div></div>
+<div class="hb"><div class="bg3"><svg viewBox="0 0 160 150" role="img" aria-label="Coriander"><path d="M50 140l6-40h48l6 40z" fill="#e8b5a0"/><g stroke="#6aa07a" stroke-width="4" stroke-linecap="round" fill="none"><path d="M80 100V62M80 84L62 68M80 84l18-16"/></g><g fill="#93c09a"><circle cx="80" cy="54" r="12"/><circle cx="58" cy="62" r="10"/><circle cx="102" cy="62" r="10"/></g></svg></div><div class="tx"><h3>Coriander</h3><p>Prefers cooler weather and can flower quickly in heat.</p><b>🌤️ Morning sun</b></div></div>
+<div class="hb"><div class="bg0"><svg viewBox="0 0 160 150" role="img" aria-label="Parsley"><path d="M50 140l6-40h48l6 40z" fill="#f2c9b6"/><g fill="#7fae86"><circle cx="80" cy="70" r="12"/><circle cx="62" cy="80" r="11"/><circle cx="98" cy="80" r="11"/><circle cx="70" cy="56" r="9"/><circle cx="92" cy="56" r="9"/><circle cx="80" cy="46" r="8"/></g></svg></div><div class="tx"><h3>Parsley</h3><p>Slow to sprout, then steady. Cut outer stems first.</p><b>☀️ 4 to 6 hours</b></div></div>
+<div class="hb"><div class="bg1"><svg viewBox="0 0 160 150" role="img" aria-label="Chives"><path d="M50 140l6-40h48l6 40z" fill="#e8b5a0"/><g stroke="#6aa07a" stroke-width="4" stroke-linecap="round"><path d="M64 100V46M72 100V36M80 100V32M88 100V38M96 100V48"/></g></svg></div><div class="tx"><h3>Chives</h3><p>Hardy and easy. Snip near the base for fresh growth.</p><b>☀️ 6 hours of sun</b></div></div>
+</div></div></section>
+
+<section><div class="w two">
+<div class="kit"><h2 style="font-size:1.6rem">🧺 Windowsill starter kit</h2>
+<label><input type="checkbox"><span>Pots with drainage holes</span></label>
+<label><input type="checkbox"><span>Seed-starting or potting mix</span></label>
+<label><input type="checkbox"><span>Saucers to catch extra water</span></label>
+<label><input type="checkbox"><span>Small watering can or spray bottle</span></label>
+<label><input type="checkbox"><span>Clean scissors for harvesting</span></label></div>
+<div class="tips"><h2 style="font-size:1.6rem">💧 Watering tips</h2><ul><li>Check the soil with a fingertip before watering.</li><li>Water in the morning so leaves dry during the day.</li><li>Water until it drains, then empty the saucer.</li><li>Small pots dry out faster, so check them more often.</li></ul></div>
+</div></section>
+
+<section class="bg3"><div class="w">
+<div class="head"><h2>Quick fixes for common problems 🛠️</h2></div>
+<div class="fix">
+<div class="fx1">Tall, thin, floppy stems</div><div class="fx2">Not enough light. Move to a brighter window and pinch the tips.</div>
+<div class="fx1">Yellowing leaves</div><div class="fx2">Often too much water. Let the soil dry and check drainage.</div>
+<div class="fx1">Herb flowers too soon</div><div class="fx2">Heat or stress. Pinch flower buds and harvest more often.</div>
+<div class="fx1">Tiny insects on leaves</div><div class="fx2">Rinse leaves with water and isolate the pot until clear.</div>
+</div></div></section>
+
+<section><div class="w"><div class="join">
+<h2>Join thousands already making the switch 💬</h2>
+<p>People choose Stakflow because fresh herbs make cooking better and growing them is calming. Enjoy a Breathtaking Experience, one leaf at a time.</p>
+</div></div></section>
+
+<section class="bg0" id="faq"><div class="w faq">
+<div><h2>Frequently asked questions ❓</h2><p class="s">Can't find your answer? Our support team replies in plain language.</p></div>
+<div>
+<details><summary>Is it free to join?</summary><p>Yes. You can create an account and read every guide for free.</p></details>
+<details><summary>Do I need a garden?</summary><p>No. A sunny windowsill, balcony or shelf near a bright window is enough for most herbs.</p></details>
+<details><summary>How much sun do herbs need?</summary><p>Most like four to six hours or more of light a day. Check each herb's card for details.</p></details>
+<details><summary>Can I grow herbs from shop-bought plants?</summary><p>Yes. Repot into a bigger pot with drainage, water gently and harvest lightly at first.</p></details>
+</div></div></section>
+
+<section class="cta"><div class="w">
+<h2>Your future starts now with Stakflow 🌿</h2>
+<p>Create a free account and unlock exclusive member benefits. Try it out today and you'll never be disappointed.</p>
+<p class="lm">Act fast: limited time, unlimited value.</p>
+</div></section>
+
+<footer><div class="w"><span>© 2026 Stakflow. Online Adventures Platform.</span><span>Designed for dreamers, built for doers.</span></div></footer>
+</div>
